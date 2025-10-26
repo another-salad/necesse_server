@@ -1,0 +1,15 @@
+services:
+  necesse:
+    container_name: NecesseGameServer
+    build: .
+    restart: always
+    ports:
+      -  14159:14159/udp
+    environment:
+      MOTD: Hello There!
+      PASSWORD: SomethingReallySecure
+      SLOTS: 25
+      PAUSE: 1
+    volumes:
+      - ./data/saves:/necesse_server/saves
+      - ./data/logs:/necesse_server/logs
