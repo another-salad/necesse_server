@@ -17,4 +17,6 @@ ENV PATH="$PATH:/usr/games"
 
 COPY ./entrypoint.sh /entrypoint.sh
 
+WORKDIR /necesse_server
+
 ENTRYPOINT ["bash", "/entrypoint.sh"]
